@@ -14,8 +14,11 @@ module.exports = (app, passport, Estudiantes) => {
     );
 
 
-    app.get('/perfil', (req, res) => {
-        res.send("He, you logedin.")
+    app.get('/perfil', isLoggedIn, (req, res) => {
+        console.log("EL USUARIO QUE RESIVO DEL REQ.", req.user)
+        res.render('perfil', {
+          user: req.user
+        })
     })
   
 };

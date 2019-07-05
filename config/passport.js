@@ -8,9 +8,6 @@ const Estudiantes = require('../models/estudiantes');
 
 module.exports = function (passport) {
 
-  passport.serializeUser(function (user2, done) {
-    done(null, user2.id);
-  });
 
   passport.serializeUser(function (estu, done) {
     done(null, estu.id)
@@ -22,9 +19,6 @@ module.exports = function (passport) {
       done(err, estu)
     })
   })
-
-
-
   
   passport.use('estu-login', new LocalStrategy( {
     usernameField: 'emailEstu',

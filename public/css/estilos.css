@@ -57,30 +57,12 @@ p{
   text-align: left; /* requerido para volver a alinear texto izquierda */
   width: 75%;
 }
-.fondo{
-  background-image: url("img/index.jpg");
-  width: 100%;
-  height: 100%;
-
-}
 .acerca{
   background-color:  #FFFFFF;
   height: 100%;
 }
 
-  body, html{
-    height: 100%;
-    background-image: url("img/index.jpg");
 
-    /* Full height */
-    height:100%;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
   h1, h2, h3, h4, h5, h6{
     font-family: 'Fredoka One', cursive;
   }
@@ -120,17 +102,7 @@ p{
 
 }
 
-body, html{
-  height: 100%;
-  background-image: url("img/index.jpg");
-  /* Ancho fijo */
-  height:100%;
-  /* Todo esto es el efecto parallax xd */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 h1, h2, h3, h4, h5, h6{
   font-family: 'Fredoka One', cursive;
 }

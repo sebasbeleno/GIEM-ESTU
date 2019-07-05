@@ -1,38 +1,4 @@
-<style>
-     body, html{
-    height: 100%;
-    background-image: url("img/index.jpg");
-    /* Ancho fijo */
-    height:100%;
-    /* Todo esto es el efecto parallax xd */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  h1, h2, h3, h4, h5, h6{
-    font-family: 'Fredoka One', cursive;
-  }
 
-  .titulo-acerca h1{
-    font-size: 100px;
-    text-align: center;
-  }
-  @media (min-width: 960px){
-      .linea3{
-        display: none;
-      }
-  }
-  @media (max-width: 768px) {
-    .titulo-acerca h1{
-      font-size: 40px;
-    }
-    .contenedor{
-      display: none;
-    }
-
-}
-</style>
 <nav class="uk-navbar-container" uk-navbar>
         <div class="uk-navbar">
           <div class="uk-navbar-left"><div>
@@ -81,21 +47,7 @@
           
             </li>
            
-            <% if(page == '/login' || page == '/panel' || page == '/estudiantes') {  %>
-              <ul class="uk-navbar-nav">
-                  <li>
-                    <a href="/">Inicio</a>
-                  </li>
-                </ul>
-              <% } else { %>
-                 <ul class="uk-navbar-nav">
-                   <li>
-                     <a href="/login" class="uk-navbar-item ">Ingresar</a>
-                   </li>
-                 </ul>
-                  </span>
-              <% } %>
-            </ul>
+            
          
           
            
