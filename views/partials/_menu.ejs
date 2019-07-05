@@ -1,0 +1,105 @@
+<style>
+     body, html{
+    height: 100%;
+    background-image: url("img/index.jpg");
+    /* Ancho fijo */
+    height:100%;
+    /* Todo esto es el efecto parallax xd */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  h1, h2, h3, h4, h5, h6{
+    font-family: 'Fredoka One', cursive;
+  }
+
+  .titulo-acerca h1{
+    font-size: 100px;
+    text-align: center;
+  }
+  @media (min-width: 960px){
+      .linea3{
+        display: none;
+      }
+  }
+  @media (max-width: 768px) {
+    .titulo-acerca h1{
+      font-size: 40px;
+    }
+    .contenedor{
+      display: none;
+    }
+
+}
+</style>
+<nav class="uk-navbar-container" uk-navbar>
+        <div class="uk-navbar">
+          <div class="uk-navbar-left"><div>
+              <ul class="uk-navbar-nav">
+                  <li>
+                      <a href="ramas.html">Ramas</a>
+                      <div class="uk-navbar-dropdown">
+                          <ul class="uk-nav uk-navbar-dropdown-nav">
+                              <li><a href="/academica">Academica</a></li>
+                              <li><a href="/artes">Artes</a></li>
+                              <li><a href="/comercial">Comercial</a></li>
+                              <li><a href="/deportes">Deportes</a></li>
+                              <li><a href="/industrial">Industrial</a></li>
+                              <li><a href="/promocion">Promocion Social</a></li>
+                          </ul>
+                      </div>
+                  </li>
+              </ul>
+          </div></div>
+        <a class="uk-navbar-item uk-logo" href="/"></a>
+        <div class="uk-navbar-center-right"><div>
+            <ul class="uk-navbar-nav">
+              <li>
+                <a href="#">Modalidades</a>
+                <div class="uk-navbar-dropdown">
+                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                      <li><a href="/ciencias_matematicas">Ciencias matematicas</a></li>
+                      <li><a href="/humanidades">Humanidades</a></li>
+                      <li><a href="/sistemas">Sistemas</a></li>
+                      <li><a href="/programacion">Programación</a></li>
+                      <li><a href="/quimica">Química Industrial</a></li>
+                      <li><a href="/musica">Musica</a></li>
+                      <li><a href="/plastica">Plástica</a></li>
+                      <li><a href="/gestion">Gestion Social</a></li>
+                      <li><a href="/gastronomia">Gastronomía</a></li>
+                      <li><a href="/administracion">Administración Comercial</a></li>
+                      <li><a href="/contabilidad">Contabilidad</a></li>
+                      <li><a href="/construcciones">Construciones</a></li>
+                      <li><a href="/electricidad">Electricidad</a></li>
+                      <li><a href="/electronica">Electrónica</a></li>
+                      <li><a href="/madera">Madera</a></li>
+                      <li><a href="/metalisteria">Metalistería</a></li>
+                      <li><a href="/moda">Moda</a></li>
+                    </ul>
+                </div>
+          
+            </li>
+           
+            <% if(page == '/login' || page == '/panel' || page == '/estudiantes') {  %>
+              <ul class="uk-navbar-nav">
+                  <li>
+                    <a href="/">Inicio</a>
+                  </li>
+                </ul>
+              <% } else { %>
+                 <ul class="uk-navbar-nav">
+                   <li>
+                     <a href="/login" class="uk-navbar-item ">Ingresar</a>
+                   </li>
+                 </ul>
+                  </span>
+              <% } %>
+            </ul>
+         
+          
+           
+        </div></div>
+    </div>
+</nav>
+

@@ -1,0 +1,156 @@
+@import "https://fonts.googleapis.com/css?family=Fredoka+One";
+@import "https://fonts.googleapis.com/css?family=Concert+One";
+@import "https://fonts.googleapis.com/css?family=Comfortaa";
+
+body {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+
+nav.navbar {
+  z-index: 10;
+  font-family: 'Comfortaa', cursive;
+  background-color: #CC1414;
+}
+.container img{
+  width: 500px;
+  float: left;
+  margin-left: 100px;
+  margin-top: 50px;
+
+}
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Fredoka One', cursive;
+}
+.titulo p{
+  font-family: 'Fredoka One', cursive;
+  font-size: 150px;
+  padding-top: 50%;
+  height: 50%;
+  text-align: center;
+  color: white;
+  text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+  color: #FFFFFF;
+  transition: 1s;
+}
+.titulo h6{
+  font-family: 'Comfortaa', cursive;
+}
+.linea hr{
+  width: 50%;
+  text-align: center;
+  background-color: #DFB000;
+}
+p{
+  font-family: 'Comfortaa', cursive;
+}
+
+.descripcion p{
+  float: right;
+  width: 500px;
+  margin-right: 30%;
+
+}
+.text{
+  display: inline-block;
+  text-align: left; /* requerido para volver a alinear texto izquierda */
+  width: 75%;
+}
+.fondo{
+  background-image: url("img/index.jpg");
+  width: 100%;
+  height: 100%;
+
+}
+.acerca{
+  background-color:  #FFFFFF;
+  height: 100%;
+}
+
+  body, html{
+    height: 100%;
+    background-image: url("img/index.jpg");
+
+    /* Full height */
+    height:100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  h1, h2, h3, h4, h5, h6{
+    font-family: 'Fredoka One', cursive;
+  }
+
+  .titulo-acerca h1{
+    font-size: 100px;
+    text-align: center;
+  }
+
+  .uk-card-media-bottom:hover{
+    
+  }
+  @media (min-width: 960px){
+      .linea3{
+        display: none;
+      }
+  }
+  @media (max-width: 768px) {
+    .titulo-acerca h1{
+      font-size: 40px;
+    }
+    .contenedor{
+      display: none;
+    }
+
+}
+@media (max-width: 768px) {
+
+
+    .ramas{
+      display: none;
+    }
+
+    .titulo p{
+      display: none;
+    }
+
+}
+
+body, html{
+  height: 100%;
+  background-image: url("img/index.jpg");
+  /* Ancho fijo */
+  height:100%;
+  /* Todo esto es el efecto parallax xd */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Fredoka One', cursive;
+}
+
+.titulo-acerca h1{
+  font-size: 100px;
+  text-align: center;
+}
+@media (min-width: 960px){
+    .linea3{
+      display: none;
+    }
+}
+@media (max-width: 768px) {
+  .titulo-acerca h1{
+    font-size: 40px;
+  }
+  .contenedor{
+    display: none;
+  }
+
+}
+
