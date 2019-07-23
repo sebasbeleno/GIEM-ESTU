@@ -1,0 +1,65 @@
+<% include partials/_head %>
+<% include partials/_menu %>
+<style>
+   input[type="text"]{
+       border-width: 0px 0px 2px 0px;
+       border-color: #131313;
+   }
+</style>
+<div class="container mt-5">
+    <div class="m-5">
+            <h4>Hola, <%= user.estudiantes.nombre %></h4>
+            <p>Por favor completa esta información para continuar.</p>
+    </div>
+<!-- 
+    <p>Los datos del usuario, se guardan dentro de las variables internas de la app.</p>
+    <p>Para usar una de ellas, debemos de usar user.estudiantes.{propiedad}</p>
+    <p>Donde propiedad es la caracteristica del estudiante a consultar.</p>
+    <p>Las propiedades son: Nombre, correo, psicoEmail & password.</p>
+    
+-->
+<form method="post"  class="m-5">
+    <div class="form-group">
+        <input type="text" name="nombre" class="form-control" placeholder="Nombre:">
+    </div>
+    <div class="form-group">
+        <input type="number" name="grado" class="form-control"placeholder="Grado:">
+    </div>
+    <div class="form-group">
+        <select name="sexo" class="form-group">
+            <option value="hombre">Hombre</option>
+            <option value="mujer">Mujer</option>
+        </select>
+       
+    </div>
+    <div class="form-group">
+        <input type="number" name="edad" class="form-control"placeholder="Edad:">
+    </div>
+    <div class="form-group">
+        <input type="date" name="fecha-ingreso" class="form-control"placeholder="Fecha de ingreso">
+    </div>
+    <div class="form-group">
+        <input type="text" name="instiucion" class="form-control"placeholder="Institución:">
+    </div>
+    <div class="form-group">
+        <input type="text" name="estudiante" class="form-control"placeholder="Estudiante:">
+    </div>
+    <div class="form-group">
+        <input type="text" name="barrio" class="form-control"placeholder="Barrio:">
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block mt-5">
+        continuar
+    </button>
+
+</form>
+
+
+
+
+
+
+
+</div>
+
+<% include partials/_footer %>

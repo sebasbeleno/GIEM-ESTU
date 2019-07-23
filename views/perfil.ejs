@@ -1,15 +1,11 @@
 <% include partials/_head %>
 <% include partials/_menu %>
 
-<div class="container mt-5">
-    <h1>Hola, <%= user.estudiantes.nombre %></h1>
-    <h2>Tu psico es: <%= user.estudiantes.psicoEmail %></h2>
 
-    <p>Los datos del usuario, se guardan dentro de las variables internas de la app.</p>
-    <p>Para usar una de ellas, debemos de usar user.estudiantes.{propiedad}</p>
-    <p>Donde propiedad es la caracteristica del estudiante a consultar.</p>
-    <p>Las propiedades son: Nombre, correo, psicoEmail & password.</p>
+<h1>Hola! Un gusto tenerte de nuevo, <%= user.nombre %></h1>
 
-</div>
-
-<% include partials/_footer %>
+<% if(!user.datos) { %>
+    <p>Sin datos</p>
+<% }else{ %>
+    <p>Con datos</p>
+<% } %>

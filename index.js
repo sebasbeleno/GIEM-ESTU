@@ -22,7 +22,7 @@ mongoose.connect(url, {
 require('./config/passport')(passport);
 
 //Configuraciones
-app.set('port', process.env.PORT || 2020);
+app.set('port', process.env.PORT || 5151);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
