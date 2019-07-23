@@ -1,11 +1,59 @@
 <% include partials/_head %>
 <% include partials/_menu %>
 
+<div class="container mt-5">
+    <div class="row">
+        <div class="col col-md-6">
+            <h1>Hola! Un gusto tenerte de nuevo, <%= user.nombre %></h1>
 
-<h1>Hola! Un gusto tenerte de nuevo, <%= user.nombre %></h1>
+            <br>
 
-<% if(!user.datos) { %>
-    <p>Sin datos</p>
-<% }else{ %>
-    <p>Con datos</p>
-<% } %>
+            <% if(user.datos) { %>
+                <div class="alert alert-success" role="alert">
+                    El usuario ya puede realizar el test
+                    <%= user.datos %>
+                </div>
+            <% }else{ %>
+                <div class="alert alert-danger" role="alert">
+                    El usuario no puede realizar el test
+                </div>
+            <% } %>
+
+            <div class="card text-center" >
+                <div class="card-body">
+                  <h5 class="card-title">Resultados test</h5>
+                  <p class="card-text">No has realizado el test, por tanto no podemos brindarte estadistica :(</p>
+                  <a href="#" class="btn btn-primary disabled" >Ver más</a>
+                </div>
+            </div>
+
+            <br>
+
+            <a href="/logout" class="btn btn-dark btn-block">Cerrar Session</a>
+        </div>
+        <div class="col col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h3><%= user.nombre %></h3>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><h6>Tu correo es:</h6><%= user.correo %></li>
+                        <li class="list-group-item"><h6>El correo de tu Psico es:</h6><%= user.psicoEmail %></li>
+                        <li class="list-group-item"><h6>Tienes</h6><%= user.edad %> Años</li>
+                        <li class="list-group-item"><h6>Eres:</h6><%= user.sexo %></li>
+                        <li class="list-group-item"><h6>Estás en grado:</h6><%= user.grado %></li>
+                    </ul>
+
+                    <br>
+                    
+                    <button class="btn btn-primary btn-block">
+                        Realizar Test
+                    </button>
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>

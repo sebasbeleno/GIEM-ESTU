@@ -56,7 +56,7 @@ module.exports = (app, passport) => {
           res.redirect('/completar')
         }else{
           res.render("perfil", {
-            user: req.user.estudiantes
+            user: results[0].estudiantes
           })
         }
 
@@ -66,6 +66,11 @@ module.exports = (app, passport) => {
 
       
     })
+
+    app.get('/logout', (req, res) => {
+      req.logout();
+      res.redirect('/');
+    });
   
 };
   
