@@ -1,0 +1,2 @@
+{"_id":{"$oid":"5d3673c38027431054a214ec"},"estudiantes":{"fecha_registro":{"$date":{"$numberLong":"1563849667779"}},"nombre":"Laisi Martines","correo":"laisi@gmail.com","psicoEmail":"sebas@gmail.com","password":"456","datos":false},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5d37a979b738e806dc20f520"},"estudiantes":{"fecha_registro":{"$date":{"$numberLong":"1563928953119"}},"nombre":"Sebastian Beleño","correo":"sebasbeleno15@gmail.com","psicoEmail":"sebas@gmail.com","password":"1001683718","datos":true,"edad":"16","grado":"11","sexo":"hombre"},"__v":{"$numberInt":"0"}}

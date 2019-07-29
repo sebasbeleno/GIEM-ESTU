@@ -1,0 +1,3 @@
+{"_id":{"$oid":"5cd0eefdf2e04d392ad1b131"},"local":{"password":"$2a$08$EVro.F.4QI7t5cDsekixEetzFivtUo/MXgYDEx0uLCOghm0mjmhiy","psicoEmail":"sebasbeleno15@gmail.com","edad":"None","nombre":"None","email":"k1@gmail.com"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5cd0ebafb4a9932d5ef5a2fe"},"local":{"password":"$2a$08$3Gp9L1W.KWk8TdWCJPceR.Dgw560YVz/V1f6ZRJuydybLWhGZ9Q2q","email":"sebas@gmail.com","nombre":"Sebastian Beleño"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5cedeeef6e335651945863e7"},"local":{"email":"pepe@gmail.com","nombre":"None","edad":"None","psicoEmail":"sebasbeleno15@gmail.com","password":"$2a$08$Rv/OkrZhv1gk91vleC1FOuLtDYwNPQqzQzHmo6ji4D1RA/oHB5q7."},"__v":{"$numberInt":"0"}}

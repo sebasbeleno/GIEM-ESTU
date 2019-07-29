@@ -74,6 +74,10 @@ module.exports = (app, passport) => {
     })
 
 
+    app.post('/test', (req, res) => {
+      res.send(req.body)
+    })
+
     app.get('/logout', (req, res) => {
       req.logout();
       res.redirect('/');
