@@ -67,11 +67,20 @@ module.exports = (app, passport) => {
       
     })
 
+
+
+    app.get('/test', (req, res) => {
+      res.render('test')
+    })
+
+
     app.get('/logout', (req, res) => {
       req.logout();
       res.redirect('/');
     });
   
+
+   
 };
   
   /** Esto, es un middleware, que nos verifica si es usuario tiene una session abierta

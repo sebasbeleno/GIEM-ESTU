@@ -1,0 +1,2172 @@
+    
+<% include partials/_head %>
+<link rel="stylesheet" href="css/test.css">
+<div class="uk-text-center  contenedor uk-container uk-container-small">
+    <form id="formulario" action="/test" method="POST">
+            <div class="tab uk-margin">
+                <div class="titulo">
+                        <h1 class="uk-heading-line uk-text-center"><span>Instruciones</span></h1>
+                </div>
+  
+                <div class="uk-margin-medium-top">
+                        <ul class=" uk-flex-center" uk-tab uk-switcher="animation: uk-animation-slide-left-medium, uk-animation-slide-right-medium">
+                            <li class="uk-active"><a href="#">¿De que va?</a></li>
+                            <li><a href="#">¿Preguntas frecuentes</a></li>
+                        </ul>
+                        <ul class="uk-switcher uk-margin">
+                                <li>
+                                    <div class="uk-container">
+                                        <div class="uk-grid-match uk-child-width-1-3@m" uk-grid>
+                                            <div>
+                                                <p>¡Hola, que tal!, nos imaginamos que te estarás preguntando “de qué
+                                                    va esto?”, pues precisamente ¡vamos a contártelo!.</p>
+                                            </div>
+                                            <div>
+                                                <p>Este test tiene el objetivo de guiarte y aconsejarte acerca de la
+                                                modalidades y ramas que puedes elegir en grado 8vo o 9no..</p>
+                                                <p>
+                                                Si eres aspirante y/o estas apunto de ingresar a nuestra institución,
+                                                también puedes tomar este test, que no se te olvide que ya eres
+                                                INEMITA :D.
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <p>
+                                                OJO: NO son recomendaciones 100% exactas, sin embargo son
+                                                respuestas basadas en nuestros algoritmos. No te lo tomes a pecho.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="uk-container">
+                                        <dl class="uk-description-list uk-description-list-divider">
+                                            <dt><h3 class="uk-heading-bullet">¿Cómo se evalúa?</h3></dt>
+                                            <dd>Fácil y sencillo, te preguntaremos acerca de si te gusta o no
+                                                ciertas actividades que están relacionadas con nuestras
+                                                ramas y modalidades.</dd>
+                                            <dd>
+                                                En una escala de 1 a 5 divididas en “Me gusta mucho”, “Me
+                                                gusta un poco”, “Me es indiferente”; “Me desagrada un poco”,
+                                                “Me desagrada mucho”.
+                                            </dd>
+                                            <dd>
+                                                Después de responder, dejanos a hacer nuestra magia para
+                                                darte tus recomendaciones.
+                                            </dd>
+                                            <dt><h3 class="uk-heading-bullet">¿Después de esto, que o que?</h3></dt>
+                                            <dd>
+                                                Si ya terminaste el test y ya sabes tus recomendaciones,
+                                                contacta con tu psicorientador correspondiente, el ya tendrá
+                                                tus datos y tu calificacion y él ya sabrá que hacer.
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                        </ul>
+                </div>
+            </div>
+  
+            <div class="tab">
+                <h3>A.¿QUÉ TANTO ME GUSTARÍA?</h3>
+      <div class="grid-container">
+  
+                    <div class="p1">
+                        <h6>Salir de excursión</h6>
+                    </div>
+                    <div class="p2">
+                        <h6>Pertenecer a un club de exploradores</h6>
+                    </div>
+                    <div class="p3">
+                        <h6>Sembrar  y cosechar en una huerta</h6>
+                    </div>
+                    <div class="p4">
+                        <h6>Criar animales en una finca</h6>
+                    </div>
+                    <div class="p5">
+                        <h6>Construir casas,puentes o carreteras</h6>
+                    </div>
+                    <div class="p6">
+                        <h6>Vivir al aire libre, fuera de la ciudad</h6>
+                    </div>
+                    <div class="i-1-1">
+  
+                        <label>
+                            <input type="radio"value ="50" name="p1" >
+  
+                              <i uk-tooltip="Me gusta mucho"class="far fa-grin-stars fa-3x"></i>
+  
+                        </label>
+                    </div>
+                    <div class="i-1-2">
+                        <label>
+                            <input type="radio" value="40" name="p1" >
+                            <i uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-1-3">
+                        <label >
+                            <input type="radio"value="30" name="p1" >
+                            <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-1-4">
+                        <label >
+                            <input type="radio" value="20" name="p1" >
+                            <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-1-5">
+                        <label >
+                            <input type="radio"value="10" name="p1" >
+                            <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-2-1">
+                        <label >
+                            <input type="radio" value="50" name="p2" >
+                            <i  uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-2-2">
+                        <label >
+                            <input type="radio" value="40" name="p2" >
+                            <i  uk-tooltip="Me gusta un poco"class="far fa-grin-alt fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-2-3">
+                        <label >
+                            <input type="radio" value="30" name="p2" >
+                            <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-2-4">
+                        <label >
+                            <input type="radio" value="20" name="p2" >
+                            <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-2-5">
+                        <label >
+                            <input type="radio" value="10" name="p2" >
+                            <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-3-1">
+                        <label >
+                            <input type="radio"value="50"  name="p3" >
+                            <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-3-2">
+                        <label>
+                            <input type="radio" value="40" name="p3" >
+                            <i uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-3-3">
+                        <label >
+                            <input type="radio" value="30" name="p3" >
+                            <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-3-4">
+                        <label >
+                            <input type="radio" value="20" name="p3" >
+                            <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-3-5">
+                        <label >
+                            <input type="radio"value="10" name="p3" >
+                            <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-4-1">
+                        <label >
+                            <input type="radio"value="50" name="p4">
+                            <i  uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-4-2">
+                        <label >
+                            <input type="radio"value="40" name="p4" >
+                            <i uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-4-3">
+                        <label >
+                            <input type="radio"value="30" name="p4" >
+                            <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-4-4">
+                        <label >
+                            <input type="radio" value="20" name="p4" >
+                            <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-4-5">
+                        <label >
+                            <input type="radio" value="10" name="p4" >
+                            <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-5-1">
+                        <label >
+                            <input type="radio" value="50" name="p5" >
+                            <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-5-2">
+                        <label>
+                            <input type="radio"value="40" name="p5" >
+                            <i  uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-5-3">
+                        <label >
+                            <input type="radio"value="30" name="p5" >
+                            <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-5-4">
+                        <label >
+                            <input type="radio" value="20" name="p5" >
+                            <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-5-5">
+                        <label >
+                            <input type="radio" value="10" name="p5" >
+                            <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-6-1">
+                        <label >
+                            <input type="radio" value="50" name="p6">
+                            <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-6-2">
+                        <label >
+                            <input type="radio" value="40" name="p6">
+                            <i uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-6-3">
+                        <label >
+                            <input type="radio" value="30" name="p6">
+                            <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-6-4">
+                        <label >
+                            <input type="radio" value="20" name="p6">
+                            <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-6-5">
+                        <label >
+                            <input type="radio" value="10" name="p6">
+                            <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                        </label>
+                    </div>
+                  </div>
+            </div>
+  
+            <div class="tab">
+                <h3>B.¿QUÉ TANTO ME GUSTARÍA?</h3>
+      <div class="grid-container">
+  
+                    <div class="p1">
+                        <h6>Armar o desarmar objetos mecánicos</h6>
+                    </div>
+                    <div class="p2">
+                        <h6>Manejar herramientas y máquinas</h6>
+                    </div>
+                    <div class="p3">
+                        <h6>Construir objetos o muebles de madera</h6>
+                    </div>
+                    <div class="p4">
+                        <h6>Reparar las instalaciones eléctricas de tu casa</h6>
+                    </div>
+                    <div class="p5">
+                        <h6>Proyectar o dirigir la construcción de una piscina</h6>
+                    </div>
+                    <div class="p6">
+                        <h6>Trabajar en un taller de mecánica</h6>
+                    </div>
+                    <div class="i-1-1">
+                        <label>
+                            <input type="radio" value="50" name="p7" >
+  
+                            <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+  
+                        </label>
+                    </div>
+                    <div class="i-1-2">
+                        <label>
+                            <input type="radio" value="40" name="p7" >
+                            <i uk-tooltip="Me gusta un poco"class="far fa-grin-alt fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-1-3">
+                        <label >
+                            <input type="radio" value="30" name="p7">
+                            <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-1-4">
+                        <label >
+                            <input type="radio" value="20" name="p7" >
+                            <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-1-5">
+                        <label >
+                            <input type="radio"value="10"  name="p7" >
+                            <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-2-1">
+                        <label >
+                            <input type="radio" value="50" name="p8" >
+                            <i  uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-2-2">
+                        <label >
+                            <input type="radio" value="40"name="p8" >
+                            <i  uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-2-3">
+                        <label >
+                            <input type="radio"value="30" name="p8" >
+                            <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-2-4">
+                        <label >
+                            <input type="radio"value="20" name="p8" >
+                            <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-2-5">
+                        <label >
+                            <input type="radio" value="10" name="p8" >
+                            <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-3-1">
+                        <label >
+                            <input type="radio" value="50" name="p9" >
+                            <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-3-2">
+                        <label>
+                            <input type="radio" value="40" name="p9" >
+                            <i uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-3-3">
+                        <label >
+                            <input type="radio"value="30" name="p9" >
+                            <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-3-4">
+                        <label >
+                            <input type="radio"value="20" name="p9" >
+                            <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-3-5">
+                        <label >
+                            <input type="radio"value="10" name="p9" >
+                            <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-4-1">
+                        <label >
+                            <input type="radio" value="50" name="p10">
+                            <i  uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-4-2">
+                        <label >
+                            <input type="radio" value="40" name="p10" >
+                            <i uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-4-3">
+                        <label >
+                            <input type="radio"value="30" name="p10">
+                            <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-4-4">
+                        <label >
+                            <input type="radio"value="20" name="p10">
+                            <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-4-5">
+                        <label >
+                            <input type="radio"value="10" name="p10" >
+                            <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-5-1">
+                        <label >
+                            <input type="radio"value="50" name="p11">
+                            <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-5-2">
+                        <label>
+                            <input type="radio" value="40" name="p11">
+                            <i  uk-tooltip="Me gusta un poco"class="far fa-grin-alt fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-5-3">
+                        <label >
+                            <input type="radio" value="30" name="p11">
+                            <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-5-4">
+                        <label >
+                            <input type="radio"value="20"  name="p11">
+                            <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-5-5">
+                        <label >
+                            <input type="radio"value="10" name="p11">
+                            <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-6-1">
+                        <label >
+                            <input type="radio"value="50"  name="p12">
+                            <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-6-2">
+                        <label >
+                            <input type="radio"value="40" name="p12">
+                            <i uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-6-3">
+                        <label >
+                            <input type="radio" value="30" name="p12">
+                            <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-6-4">
+                        <label >
+                            <input type="radio"value="20" name="p12">
+                            <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                        </label>
+                    </div>
+                    <div class="i-6-5">
+                        <label >
+                            <input type="radio"value="10" name="p12">
+                            <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                        </label>
+                    </div>
+                  </div>
+            </div>
+  
+            <div class="tab">
+                    <h3>C.¿QUÉ TANTO ME GUSTARÍA?</h3>
+                    <div class="grid-container">
+  
+                        <div class="p1">
+                            <h6>Resolver problemas matemáticos</h6>
+                        </div>
+                        <div class="p2">
+                            <h6>Resolver pasatiempos numéricos</h6>
+                        </div>
+                        <div class="p3">
+                            <h6>Llevar cuentas de dinero</h6>
+                        </div>
+                        <div class="p4">
+                            <h6>Explicar a otros como resolver problemas matemáticos</h6>
+                        </div>
+                        <div class="p5">
+                            <h6>Participar en olimpiadas matemáticas</h6>
+                        </div>
+                        <div class="p6">
+                            <h6>Llevar la contabilidad de una empresa</h6>
+                        </div>
+                        <div class="i-1-1">
+                            <label>
+                                <input type="radio" value="50" name="p13">
+  
+                                    <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+  
+                            </label>
+                        </div>
+                        <div class="i-1-2">
+                            <label>
+                                <input type="radio" value ="40" name="p13">
+                                <i uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-1-3">
+                            <label >
+                                <input type="radio"value="30" name="p13" >
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-1-4">
+                            <label >
+                                <input type="radio" value="20" name="p13" >
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-1-5">
+                            <label >
+                                <input type="radio"value="10" name="p13" >
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-1">
+                            <label >
+                                <input type="radio"value="50" name="p14" >
+                                <i  uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-2">
+                            <label >
+                                <input type="radio"value="40" name="p14" >
+                                <i  uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-3">
+                            <label >
+                                <input type="radio" value="30" name="p14" >
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-4">
+                            <label >
+                                <input type="radio" value="20" name="p14" >
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-5">
+                            <label >
+                                <input type="radio" value="10" name="p14">
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-1">
+                            <label >
+                                <input type="radio" value="50" name="p15" >
+                                <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-2">
+                            <label>
+                                <input type="radio" value="40" name="p15" >
+                                <i uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-3">
+                            <label >
+                                <input type="radio"value="30" name="p15" >
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-4">
+                            <label >
+                                <input type="radio" value="20" name="p15" >
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-5">
+                            <label >
+                                <input type="radio" value="10" name="p15" >
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-1">
+                            <label >
+                                <input type="radio" value="50" name="p16" >
+                                <i  uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-2">
+                            <label >
+                                <input type="radio" value="40" name="p16" >
+                                <i uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-3">
+                            <label >
+                                <input type="radio" value="30" name="p16" >
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-4">
+                            <label >
+                                <input type="radio"value="20" name="p16" >
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-5">
+                            <label >
+                                <input type="radio"value="10" name="p16" >
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-1">
+                            <label >
+                                <input type="radio"value="50" name="p17" >
+                                <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-2">
+                            <label>
+                                <input type="radio" value="40" name="p17" >
+                                <i  uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-3">
+                            <label >
+                                <input type="radio" value="30" name="p17">
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-4">
+                            <label >
+                                <input type="radio" value="20" name="p17" >
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-5">
+                            <label >
+                                <input type="radio"value="10" name="p17">
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-1">
+                            <label >
+                                <input type="radio" value="50"name="p18">
+                                <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-2">
+                            <label >
+                                <input type="radio" value="40" name="p18" >
+                                <i uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-3">
+                            <label >
+                                <input type="radio" value="30" name="p18" >
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-4">
+                            <label >
+                                <input type="radio"value="20" name="p18" >
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-5">
+                            <label >
+                                <input type="radio" value="10" name="p18" >
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                      </div>
+            </div>
+  
+            <div class="tab">
+                    <h3>D.¿QUÉ TANTO ME GUSTARÍA?</h3>
+                    <div class="grid-container">
+  
+                        <div class="p1">
+                            <h6>Conocer y estudiar las estructuras de las plantas y los animales</h6>
+                        </div>
+                        <div class="p2">
+                            <h6>Hacer experimentos de biologìa,fìsica o química</h6>
+                        </div>
+                        <div class="p3">
+                            <h6>Investigar el origen de las costumbres de los pueblos</h6>
+                        </div>
+                        <div class="p4">
+                            <h6>Estudiar y entender las causas de los ,movimientos sociales</h6>
+                        </div>
+                        <div class="p5">
+                            <h6>Leer revistas y libros científicos</h6>
+                        </div>
+                        <div class="p6">
+                            <h6>Ser investigador en un laboratorio</h6>
+                        </div>
+                        <div class="i-1-1">
+                            <label>
+                                <input type="radio" value="50" name="p19" >
+  
+                                    <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+  
+                            </label>
+                        </div>
+                        <div class="i-1-2">
+                            <label>
+                                <input type="radio" value="40" name="p19" >
+                                <i uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-1-3">
+                            <label >
+                                <input type="radio" value="30" name="p19" >
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-1-4">
+                            <label >
+                                <input type="radio" value="20" name="p19" >
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-1-5">
+                            <label >
+                                <input type="radio" value="10" name="p19" >
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-1">
+                            <label >
+                                <input type="radio"value="50" name="p20" >
+                                <i  uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-2">
+                            <label >
+                                <input type="radio" value="40" name="p20" >
+                                <i  uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-3">
+                            <label >
+                                <input type="radio" value="30" name="p20" >
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-4">
+                            <label >
+                                <input type="radio"value="20" name="p20" >
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-5">
+                            <label >
+                                <input type="radio" value="10" name="p20" >
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-1">
+                            <label >
+                                <input type="radio" value="50" name="p21" >
+                                <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-2">
+                            <label>
+                                <input type="radio" value="40"name="p21" >
+                                <i uk-tooltip="Me gusta un poco"class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-3">
+                            <label >
+                                <input type="radio" value="30" name="p21">
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-4">
+                            <label >
+                                <input type="radio" value="20" name="p21" >
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-5">
+                            <label >
+                                <input type="radio" value="10" name="p21" >
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-1">
+                            <label >
+                                <input type="radio"value="50"  name="p22" >
+                                <i  uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-2">
+                            <label >
+                                <input type="radio" value="40" name="p22">
+                                <i uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-3">
+                            <label >
+                                <input type="radio" value="30" name="p22" >
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-4">
+                            <label >
+                                <input type="radio" value="20" name="p22" >
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-5">
+                            <label >
+                                <input type="radio"value="10" name="p22" >
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-1">
+                            <label >
+                                <input type="radio"value="50" name="p23" >
+                                <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-2">
+                            <label>
+                                <input type="radio" value="40" name="p23" >
+                                <i  uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-3">
+                            <label >
+                                <input type="radio" value="30" name="p23" >
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-4">
+                            <label >
+                                <input type="radio"value="20" name="p23" >
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-5">
+                            <label >
+                                <input type="radio"value="10" name="p23" >
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-1">
+                            <label >
+                                <input type="radio" value="50"name="p24" >
+                                <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-2">
+                            <label >
+                                <input type="radio"value="40" name="p24">
+                                <i uk-tooltip="Me gusta un poco"class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-3">
+                            <label >
+                                <input type="radio" value="30" name="p24" >
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-4">
+                            <label >
+                                <input type="radio"value="20" name="p24" >
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-5">
+                            <label >
+                                <input type="radio" value="10"name="p24">
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                      </div>
+            </div>
+  
+            <div class="tab">
+                    <h3>E.¿QUÉ TANTO ME GUSTARÍA?</h3>
+                    <div class="grid-container">
+  
+                        <div class="p1">
+                            <h6>Exponer mis argumentos en clase</h6>
+                        </div>
+                        <div class="p2">
+                            <h6>Ser lider de una comunidad</h6>
+                        </div>
+                        <div class="p3">
+                            <h6>Dirigir la campaña política de un candidato estudiantil</h6>
+                        </div>
+                        <div class="p4">
+                            <h6>Hacer propaganda para la venta de un periódico</h6>
+                        </div>
+                        <div class="p5">
+                            <h6>Leer biografías de políticos eminentes</h6>
+                        </div>
+                        <div class="p6">
+                            <h6>Ser agente de ventas de una empresa comercial</h6>
+                        </div>
+                        <div class="i-1-1">
+                            <label>
+                                <input type="radio" value="50" name="p25" >
+                                <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+  
+                            </label>
+                        </div>
+                        <div class="i-1-2">
+                            <label>
+                                <input type="radio" value="40" name="p25" >
+                                <i uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-1-3">
+                            <label >
+                                <input type="radio" value="30" name="p25" >
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-1-4">
+                            <label >
+                                <input type="radio" value="20" name="p25" >
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-1-5">
+                            <label >
+                                <input type="radio" value="10" name="p25" id="p1">
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-1">
+                            <label >
+                                <input type="radio" value="50" name="p26" >
+                                <i  uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-2">
+                            <label >
+                                <input type="radio" value="40" name="p26" >
+                                <i  uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-3">
+                            <label >
+                                <input type="radio" value="30" name="p26" >
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-4">
+                            <label >
+                                <input type="radio"  value="20" name="p26" >
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-5">
+                            <label >
+                                <input type="radio"  value="10" name="p26" id="p2">
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-1">
+                            <label >
+                                <input type="radio" value="50" name="p27" >
+                                <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-2">
+                            <label>
+                                <input type="radio" value="40" name="p27" >
+                                <i uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-3">
+                            <label >
+                                <input type="radio" value="30" name="p27" >
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-4">
+                            <label >
+                                <input type="radio" value="20" name="p27" >
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-5">
+                            <label >
+                                <input type="radio" value="10" name="p27" >
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-1">
+                            <label >
+                                <input type="radio" value="50" name="p28" >
+                                <i  uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-2">
+                            <label >
+                                <input type="radio" value="40" name="p28" >
+                                <i uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-3">
+                            <label >
+                                <input type="radio" value="30"name="p28" >
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-4">
+                            <label >
+                                <input type="radio" value="20" name="p28" >
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-5">
+                            <label >
+                                <input type="radio" value="10" name="p28">
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-1">
+                            <label >
+                                <input type="radio"value="50" name="29" >
+                                <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-2">
+                            <label>
+                                <input type="radio"  value="40" name="p29" >
+                                <i  uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-3">
+                            <label >
+                                <input type="radio" value="30" name="p29" >
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-4">
+                            <label >
+                                <input type="radio" value="20" name="p29" >
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-5">
+                            <label >
+                                <input type="radio"  value="10" name="p29" >
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-1">
+                            <label >
+                                <input type="radio"  value="50" name="p30" >
+                                <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-2">
+                            <label >
+                                <input type="radio"  value="40" name="p30" >
+                                <i uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-3">
+                            <label >
+                                <input type="radio" value="30" name="p30" >
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-4">
+                            <label >
+                                <input type="radio" value="20" name="p30" >
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-5">
+                            <label >
+                                <input type="radio" value="10" name="p30">
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                      </div>
+            </div>
+  
+            <div class="tab">
+                    <h3>F.¿QUÉ TANTO ME GUSTARÍA?</h3>
+                    <div class="grid-container">
+  
+                        <div class="p1">
+                            <h6>Dibujar paisajes y pintar obras de arte</h6>
+                        </div>
+                        <div class="p2">
+                            <h6>Diseñar planos de casas o edificios</h6>
+                        </div>
+                        <div class="p3">
+                            <h6>Decorar una exposición</h6>
+                        </div>
+                        <div class="p4">
+                            <h6> Diseñar el escudo de un club o sociedad</h6>
+                        </div>
+                        <div class="p5">
+                            <h6>Diseñar el vestuario para una función teatral</h6>
+                        </div>
+                        <div class="p6">
+                            <h6>Ser dibujante en una empresa</h6>
+                        </div>
+                        <div class="i-1-1">
+                            <label>
+                                <input type="radio" value="50"name="p31" >
+  
+                                    <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+  
+                            </label>
+                        </div>
+                        <div class="i-1-2">
+                            <label>
+                                <input type="radio"value="40" name="p31" >
+                                <i uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-1-3">
+                            <label >
+                                <input type="radio" value="30" name="p31" >
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-1-4">
+                            <label >
+                                <input type="radio" value="20" name="p31" >
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-1-5">
+                            <label >
+                                <input type="radio" value="10" name="p31" >
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-1">
+                            <label >
+                                <input type="radio" value="50" name="p32" >
+                                <i  uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-2">
+                            <label >
+                                <input type="radio"  value="40"name="p32" >
+                                <i  uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-3">
+                            <label >
+                                <input type="radio"  value="30" name="p32" >
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-4">
+                            <label >
+                                <input type="radio"  value="20"name="p32" >
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-5">
+                            <label >
+                                <input type="radio" value="10" name="p32" >
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-1">
+                            <label >
+                                <input type="radio" value="50" name="p33">
+                                <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-2">
+                            <label>
+                                <input type="radio" value="40" name="p33" >
+                                <i uk-tooltip="Me gusta un poco"class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-3">
+                            <label >
+                                <input type="radio" value="30"  name="p33" >
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-4">
+                            <label >
+                                <input type="radio" value="20"  name="p33">
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-5">
+                            <label >
+                                <input type="radio"  value="10" name="p33" >
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-1">
+                            <label >
+                                <input type="radio"  value="50" name="p34" >
+                                <i  uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-2">
+                            <label >
+                                <input type="radio"  value="40" name="p34">
+                                <i uk-tooltip="Me gusta un poco"class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-3">
+                            <label >
+                                <input type="radio" value="30"  name="p34" >
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-4">
+                            <label >
+                                <input type="radio" value="20" name="p34" >
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-5">
+                            <label >
+                                <input type="radio" value="10" name="p34" >
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-1">
+                            <label >
+                                <input type="radio" value="50" name="p35" >
+                                <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-2">
+                            <label>
+                                <input type="radio" value="40" name="p35" id="p5">
+                                <i  uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-3">
+                            <label >
+                                <input type="radio" value="30"name="p35" >
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-4">
+                            <label >
+                                <input type="radio"value="20" name="p35" >
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-5">
+                            <label >
+                                <input type="radio" value="10" name="p35" >
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-1">
+                            <label >
+                                <input type="radio" value="50"name="p36" >
+                                <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-2">
+                            <label >
+                                <input type="radio" value="40"name="p36">
+                                <i uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-3">
+                            <label >
+                              <input type="radio" value="30"name="p36">
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-4">
+                            <label >
+                                <input type="radio"value="20" name="p36">
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-5">
+                            <label >
+                                <input type="radio" value="10"name="p36">
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                      </div>
+            </div>
+  
+            <div class="tab">
+                    <h3>G.¿QUÉ TANTO ME GUSTARÍA?</h3>
+                    <div class="grid-container">
+  
+                        <div class="p1">
+                            <h6>Escribir cuentos crónicas o artículos</h6>
+                        </div>
+                        <div class="p2">
+                            <h6>Leer obras literarias</h6>
+                        </div>
+                        <div class="p3">
+                            <h6>Escribir artículos para un periódico</h6>
+                        </div>
+                        <div class="p4">
+                            <h6>Representar un papel en una obra teatral</h6>
+                        </div>
+                        <div class="p5">
+                            <h6>Participar en un concurso de oratoria</h6>
+                        </div>
+                        <div class="p6">
+                            <h6>Ser redactor de un periódico</h6>
+                        </div>
+                        <div class="i-1-1">
+                            <label>
+                                <input type="radio" value="50"name="p37" >
+  
+                                    <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+  
+                            </label>
+                        </div>
+                        <div class="i-1-2">
+                            <label>
+                                <input type="radio" value="40" name="p37" >
+                                <i uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-1-3">
+                            <label >
+                                <input type="radio"  value="30"name="p37" >
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-1-4">
+                            <label >
+                                <input type="radio" value="20" name="p37" >
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-1-5">
+                            <label >
+                                <input type="radio" value="10" name="p37" >
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-1">
+                            <label >
+                                <input type="radio"value="50" name="p38" >
+                                <i  uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-2">
+                            <label >
+                                <input type="radio"value="40" name="p38" >
+                                <i  uk-tooltip="Me gusta un poco"class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-3">
+                            <label >
+                                <input type="radio"value="30"  name="p38" >
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-4">
+                            <label >
+                                <input type="radio" value="20" name="p38" >
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-5">
+                            <label >
+                                <input type="radio" value="10"  name="p38" >
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-1">
+                            <label >
+                                <input type="radio" value="50" name="p39">
+                                <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-2">
+                            <label>
+                                <input type="radio" value="40" name="p39">
+                                <i uk-tooltip="Me gusta un poco"  class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-3">
+                            <label >
+                                <input type="radio" value="30"name="p39">
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-4">
+                            <label >
+                                <input type="radio" value="20"name="p39">
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-5">
+                            <label >
+                                <input type="radio" value="10"name="p39">
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-1">
+                            <label >
+                                <input type="radio" value="50"name="p40" >
+                                <i  uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-2">
+                            <label >
+                                <input type="radio" value="40"name="p40">
+                                <i uk-tooltip="Me gusta un poco"class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-3">
+                            <label >
+                                <input type="radio" value="30" name="p40" >
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-4">
+                            <label >
+                                <input type="radio" value="20" name="p40" >
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-5">
+                            <label >
+                                <input type="radio" value="10" name="p40" id="p4">
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-1">
+                            <label >
+                                <input type="radio" value="50" name="p41" >
+                                <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-2">
+                            <label>
+                                <input type="radio" value="40" name="p41" >
+                                <i  uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-3">
+                            <label >
+                                <input type="radio" value="30"name="p41" >
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-4">
+                            <label >
+                                <input type="radio" value="20" name="p41" >
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-5">
+                            <label >
+                                <input type="radio" value="10" name="p41" >
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-1">
+                            <label >
+                                <input type="radio"value="50" name="p42">
+                                <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-2">
+                            <label >
+                                <input type="radio" value="40"name="p42">
+                                <i uk-tooltip="Me gusta un poco"class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-3">
+                            <label >
+                                <input type="radio" value="30" name="p42">
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-4">
+                            <label >
+                                <input type="radio"value="20"  name="p42">
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-5">
+                            <label >
+                                <input type="radio"value="10"  name="p42">
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                      </div>
+            </div>
+            <div class="tab">
+                    <h3>H.¿QUÉ TANTO ME GUSTARÍA?</h3>
+                    <div class="grid-container">
+  
+                        <div class="p1">
+                            <h6>Cantar en un coro</h6>
+                        </div>
+                        <div class="p2">
+                            <h6>Pertenecer a una orqesta sinfónica</h6>
+                        </div>
+                        <div class="p3">
+                            <h6>Aprender a tocar un instrumento</h6>
+                        </div>
+                        <div class="p4">
+                            <h6>Cantar en un grupo</h6>
+                        </div>
+                        <div class="p5">
+                            <h6>Educar tu voz a través de ensayos</h6>
+                        </div>
+                        <div class="p6">
+                            <h6>Tocar en un grupo de música moderna</h6>
+                        </div>
+                        <div class="i-1-1">
+                            <label>
+                                <input type="radio" value="50" name="p43">
+  
+                                    <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+  
+                            </label>
+                        </div>
+                        <div class="i-1-2">
+                            <label>
+                                <input type="radio" value="40" name="p43">
+                                <i uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-1-3">
+                            <label >
+                                <input type="radio" value="30"name="p43">
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-1-4">
+                            <label >
+                                <input type="radio" value="20"name="p43">
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-1-5">
+                            <label >
+                                <input type="radio" value="10"name="p43">
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-1">
+                            <label >
+                                <input type="radio"value="50" name="p44" >
+                                <i  uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-2">
+                            <label >
+                                <input type="radio" value="40"name="p44" >
+                                <i  uk-tooltip="Me gusta un poco"class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-3">
+                            <label >
+                                <input type="radio" value="30" name="p44">
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-4">
+                            <label >
+                                <input type="radio" value="20" name="p44" >
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-5">
+                            <label >
+                                <input type="radio"value="10"  name="p44" >
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-1">
+                            <label >
+                                <input type="radio" value="50" name="p45" >
+                                <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-2">
+                            <label>
+                                <input type="radio" value="40" name="p45" >
+                                <i uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-3">
+                            <label >
+                                <input type="radio" value="30"name="p45">
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-4">
+                            <label >
+                                <input type="radio"value="20" name="p45">
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-5">
+                            <label >
+                                <input type="radio" value="10"name="p45">
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-1">
+                            <label >
+                                <input type="radio" value="50"name="p46">
+                                <i  uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-2">
+                            <label >
+                                <input type="radio" value="40"name="p46">
+                                <i uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-3">
+                            <label >
+                                <input type="radio"value="30" name="p46">
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-4">
+                            <label >
+                                <input type="radio" value="20"name="p46">
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-5">
+                            <label >
+                                <input type="radio" value="10" name="p46">
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-1">
+                            <label >
+                                <input type="radio" value="50"name="p47">
+                                <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-2">
+                            <label>
+                                <input type="radio"value="40" name="p47">
+                                <i  uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-3">
+                            <label >
+                                <input type="radio" value="30" name="p47">
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-4">
+                            <label >
+                                <input type="radio"value="20" name="p47">
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-5">
+                            <label >
+                                <input type="radio" value="10"name="p47">
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-1">
+                            <label >
+                                <input type="radio" value="50"name="p48">
+                                <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-2">
+                            <label >
+                                <input type="radio" value="40"name="p48">
+                                <i uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-3">
+                            <label >
+                                <input type="radio" value="30"name="p48">
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-4">
+                            <label >
+                                <input type="radio" value="20" name="p48">
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-5">
+                            <label >
+                                <input type="radio"value="10" name="p48" >
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                      </div>
+            </div>
+            <div class="tab">
+                    <h3>I.¿QUÉ TANTO ME GUSTARÍA?</h3>
+                    <div class="grid-container">
+  
+                        <div class="p1">
+                            <h6>Atender a los enfermos y cuidar de ellos</h6>
+                        </div>
+                        <div class="p2">
+                            <h6>Proteger a los menores</h6>
+                        </div>
+                        <div class="p3">
+                            <h6>Pertenecer a una sociedad de ayuda a los demás</h6>
+                        </div>
+                        <div class="p4">
+                            <h6>Enseñar a leer a los analfabetas</h6>
+                        </div>
+                        <div class="p5">
+                            <h6>Ayudar a los compañeros con dificultades</h6>
+                        </div>
+                        <div class="p6">
+                            <h6>Colaborar con campañas benéficas</h6>
+                        </div>
+                        <div class="i-1-1">
+                            <label>
+                                <input type="radio" value="50"name="p49">
+  
+                                    <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+  
+                            </label>
+                        </div>
+                        <div class="i-1-2">
+                            <label>
+                                <input type="radio" value="40"name="p49">
+                                <i uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-1-3">
+                            <label >
+                                <input type="radio" value="30"name="p49">
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-1-4">
+                            <label >
+                                <input type="radio" value="20"name="p49">
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-1-5">
+                            <label >
+                                <input type="radio" value="10"name="p49" >
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-1">
+                            <label >
+                                <input type="radio"value="50" name="p50" >
+                                <i  uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-2">
+                            <label >
+                                <input type="radio" value="40"name="p50" >
+                                <i  uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-3">
+                            <label >
+                                <input type="radio" value="30"name="p50">
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-4">
+                            <label >
+                                <input type="radio" value="20"name="p50" >
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-5">
+                            <label >
+                                <input type="radio" value="10"name="p50" >
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-1">
+                            <label >
+                                <input type="radio" value="50"name="p51">
+                                <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-2">
+                            <label>
+                                <input type="radio"value="40" name="p51" >
+                                <i uk-tooltip="Me gusta un poco"class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-3">
+                            <label >
+                                <input type="radio" value="30" name="p51" >
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-4">
+                            <label >
+                                <input type="radio"value="20"  name="p51" >
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-5">
+                            <label >
+                                <input type="radio" value="10" name="p51" >
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-1">
+                            <label >
+                                <input type="radio" value="50" name="p52" >
+                                <i  uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-2">
+                            <label >
+                                <input type="radio" value="40" name="p52" >
+                                <i uk-tooltip="Me gusta un poco"class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-3">
+                            <label >
+                                <input type="radio"value="30"  name="p52" >
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-4">
+                            <label >
+                                <input type="radio" value="20" name="p52" >
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-5">
+                            <label >
+                                <input type="radio" value="10" name="p52" >
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-1">
+                            <label >
+                                <input type="radio" value="50" name="p53" >
+                                <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-2">
+                            <label>
+                                <input type="radio" value="40" name="p53" >
+                                <i  uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-3">
+                            <label >
+                                <input type="radio" value="30"name="p53">
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-4">
+                            <label >
+                                <input type="radio" value="20"name="p53" >
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-5">
+                            <label >
+                                <input type="radio" value="10"name="p53">
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-1">
+                            <label >
+                                <input type="radio" value="50"name="p54" >
+                                <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-2">
+                            <label >
+                                <input type="radio" value="40"name="p54" >
+                                <i uk-tooltip="Me gusta un poco"class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-3">
+                            <label >
+                                <input type="radio" value="30" name="p54">
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-4">
+                            <label >
+                                <input type="radio" value="20" name="p54">
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-5">
+                            <label >
+                                <input type="radio" value="10" name="p54" id="p6">
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                      </div>
+            </div>
+            <div class="tab">
+                    <h3>J.¿QUÉ TANTO ME GUSTARÍA?</h3>
+                    <div class="grid-container">
+  
+                        <div class="p1">
+                            <h6>Llevar libros en forma ordenada</h6>
+                        </div>
+                        <div class="p2">
+                            <h6>Ordenar y clasificar certificados</h6>
+                        </div>
+                        <div class="p3">
+                            <h6>Aprender mecanografía</h6>
+                        </div>
+                        <div class="p4">
+                            <h6>Manejar el computador</h6>
+                        </div>
+                        <div class="p5">
+                            <h6>Llevar el archivo y los documentos de una sociedad</h6>
+                        </div>
+                        <div class="p6">
+                            <h6>Atender al público y contestar el teléfono</h6>
+                        </div>
+                        <div class="i-1-1">
+                            <label>
+                                <input type="radio" value="50" name="p55">
+  
+                                    <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+  
+                            </label>
+                        </div>
+                        <div class="i-1-2">
+                            <label>
+                                <input type="radio" value="40" name="p55">
+                                <i uk-tooltip="Me gusta un poco"class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-1-3">
+                            <label >
+                                <input type="radio" value="30" name="p55">
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-1-4">
+                            <label >
+                                <input type="radio" value="20" name="p55">
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-1-5">
+                            <label >
+                                <input type="radio" value="10" name="p55">
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-1">
+                            <label >
+                                <input type="radio" value="50" name="p56" >
+                                <i  uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-2">
+                            <label >
+                                <input type="radio"value="40"  name="p56" >
+                                <i  uk-tooltip="Me gusta un poco"class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-3">
+                            <label >
+                                <input type="radio" value="30" name="p56">
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-4">
+                            <label >
+                                <input type="radio"value="20"  name="p56" >
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-2-5">
+                            <label >
+                                <input type="radio" value="10" name="p56" >
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-1">
+                            <label >
+                                <input type="radio"value="50"  name="p57" >
+                                <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-2">
+                            <label>
+                                <input type="radio" value="40" name="p57" >
+                                <i uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-3">
+                            <label >
+                                <input type="radio" value="30"name="p57" >
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-4">
+                            <label >
+                                <input type="radio" value="20"name="p57" >
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-3-5">
+                            <label >
+                                <input type="radio" value="10"name="p57" >
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-1">
+                            <label >
+                                <input type="radio"value="50" name="p58" >
+                                <i  uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-2">
+                            <label >
+                                <input type="radio" value="40"name="p58" >
+                                <i uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-3">
+                            <label >
+                                <input type="radio"value="30" name="p58" >
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-4">
+                            <label >
+                                <input type="radio" value="20" name="p58" >
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-4-5">
+                            <label >
+                                <input type="radio"value="10" name="p58" >
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-1">
+                            <label >
+                                <input type="radio" value="50"name="p59" >
+                                <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-2">
+                            <label>
+                                <input type="radio" value="40"name="p59" >
+                                <i  uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-3">
+                            <label >
+                                <input type="radio"value="30" name="p59" >
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-4">
+                            <label >
+                                <input type="radio" value="20"name="p59">
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-5-5">
+                            <label >
+                                <input type="radio" value="10"name="p59">
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-1">
+                            <label >
+                                <input type="radio"value="50" name="p60">
+                                <i uk-tooltip="Me gusta mucho" class="far fa-grin-stars fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-2">
+                            <label >
+                                <input type="radio" value="40"name="p60">
+                                <i uk-tooltip="Me gusta un poco" class="far fa-grin-alt fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-3">
+                            <label >
+                                <input type="radio" value="30"name="p60">
+                                <i uk-tooltip="Me es indiferente" class="far fa-meh fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-4">
+                            <label >
+                                <input type="radio" value="20"name="p60">
+                                <i uk-tooltip="Me desagrada un poco" class="far fa-meh-rolling-eyes fa-3x"></i>
+                            </label>
+                        </div>
+                        <div class="i-6-5">
+                            <label >
+                                <input type="radio"value="10" name="p60">
+                                <i uk-tooltip="Me desagrada mucho" class="far fa-tired fa-3x"></i>
+                            </label>
+                        </div>
+                      </div>
+            </div>
+  
+  
+  
+  
+            <!-- overflow:auto; -->
+            <div>
+            <!-- float:right; -->
+                <div>
+                    <button type="button" id="prevBtn" onclick="nextPrev(-1)" class="uk-button uk-button-default">Anterior</button>
+                    <button type="button" id="nextBtn" onclick="nextPrev(1)" class="uk-button uk-button-default">Siguiente</button>
+                    <button type="submit" name="Enviar" id="sendBtn" class="uk-button uk-button-default">Enviar</button>
+                </div>
+            </div>
+            <!-- Circles which indicates the steps of the form: -->
+            <!-- text-align:center;margin-top:40px -->
+            <div>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+            </div>
+    </form>
+  
+  <script src="js/steps.js"></script>
+  
+  </div>
+  
+  <script src="js/test.js"></script>
+  
