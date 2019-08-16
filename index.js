@@ -46,6 +46,7 @@ app.use(flash());
 
 
 require('./routes/index')(app, passport);
+require('./routes/test')(app, passport);
 
 //Static files
 app.use(express.static(path.join(__dirname, 'public')));
