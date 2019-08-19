@@ -2,6 +2,8 @@ module.exports = (app, passport) => {
 
     const  MongoClient = require('mongodb').MongoClient
   
+    const Test = require('../models/tests')
+
     var db
   
     MongoClient.connect('mongodb+srv://admin:GIEM@giem-4mkhr.mongodb.net/login-node?retryWrites=true&w=majority', (err, client) => {
@@ -11,12 +13,12 @@ module.exports = (app, passport) => {
   
   
   
-      app.get('/test', (req, res) => {
+      app.get('/test', isLoggedIn, (req, res) => {
         res.render('test')
       })
   
   
-      app.post('/test', (req, res) => {
+      app.post('/test', isLoggedIn, (req, res) => {
         //res.send(req.body)
         
         let actividadesAireLibre = 0
@@ -102,15 +104,15 @@ module.exports = (app, passport) => {
         archivistica += +req.body.p59
         archivistica += +req.body.p60
         
-
-        //console.log("Al aire libre ", actividadesAireLibre, " Mecanicos: ", Mecanicos, " Calculo", Calculo, " cientifico: ", Cientificos, ", Persuasivo: " + Persuasivos + ", artisticos ", ArtísticosPlásticos, ", literarios: ", Literarios, ", musicales: ", Musicales, ", servicio: ", ServicioSocial, ", archivisticos: ", archivistica )
-
-
+        
+        console.log(req.user)
         var todas = [actividadesAireLibre, Mecanicos, Calculo, Cientificos, Persuasivos, ArtísticosPlásticos, Literarios, Musicales, ServicioSocial, archivistica]
         var n, i, k, aux
         n = todas.length
         console.log(todas)
 
+
+        //Ordenamiento en burbujas 
         for (let k = 1; k < n; k++) {
             for (let i = 0; i < (n - k); i++) {
                 if (todas[i] < todas[i + 1]) {
@@ -122,8 +124,29 @@ module.exports = (app, passport) => {
             }
         }
 
-        console.log(todas)
-        res.send(todas)
+
+        //Base de datos.
+        let test = new Test()
+
+        test.test.actividadesAireLibre = actividadesAireLibre
+        test.test.Mecanicos = Mecanicos
+        test.test.Calculo = Calculo,
+        test.test.Cientificos = Cientificos,
+        test.test.Persuasivos = Persuasivos,
+        test.test.ArtísticosPlásticos = ArtísticosPlásticos,
+        test.test.Literarios = Literarios,
+        test.test.ServicioSocial = ServicioSocial,
+        test.test.archivistica = archivistica,
+        test.test.estudianteCorreo = req.user.estudiantes.correo
+        test.test.psicoCorreo = req.user.estudiantes.psicoEmail
+
+        test.save(function (err){
+          if (err) res.send(err)
+          console.log(todas)
+          res.redirect('/resultados')
+          
+        })
+        
          
 
 
@@ -133,6 +156,44 @@ module.exports = (app, passport) => {
         req.logout();
         res.redirect('/');
       });
+
+      app.get('/resultados', isLoggedIn, (req, res) => {
+        
+
+        db.collection('tests').find({'test.estudianteCorreo': req.user.estudiantes.correo}).toArray((err, result)  => {
+          
+          if(err) res.send(err)
+
+          console.log(result)
+
+          var cossas = result[0].test
+
+
+          function sortByValue(jsObj){
+            var sortedArray = [];
+            for(var i in jsObj)
+            {
+                // Push each JSON Object entry in array by [value, key]
+                sortedArray.push([jsObj[i], i]);
+            }
+            return sortedArray.sort();
+          } 
+
+     
+
+          var ordenadoPorValor = sortByValue(cossas)
+
+
+          console.table(ordenadoPorValor)
+
+          res.render('resultados', {
+            user: req.user.estudiantes,
+            resultados: result[0].test
+          })
+          
+        })
+        
+      })
      
   };
     
