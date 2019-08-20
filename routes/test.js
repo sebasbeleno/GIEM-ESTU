@@ -140,12 +140,20 @@ module.exports = (app, passport) => {
         test.test.estudianteCorreo = req.user.estudiantes.correo
         test.test.psicoCorreo = req.user.estudiantes.psicoEmail
 
-        test.save(function (err){
-          if (err) res.send(err)
-          console.log(todas)
-          res.redirect('/resultados')
-          
+        db.collection('estudiantes').updateOne({'_id': req.user._id}, {$set: {'estudiantes.test': true}}, (err, result) => {
+          console.log('test, realizado')
+
+          if(err) console.log(err)
+
+          test.save(function (err){
+            if (err) res.send(err)
+            console.log(todas)
+            res.redirect('/resultados')
+            
+          })
         })
+
+       
         
          
 

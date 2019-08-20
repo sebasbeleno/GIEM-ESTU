@@ -20,11 +20,22 @@
             <% } %>
 
             <div class="card text-center" >
-                <div class="card-body">
-                  <h5 class="card-title">Resultados test</h5>
-                  <p class="card-text">No has realizado el test, por tanto no podemos brindarte estadistica :(</p>
-                  <a href="#" class="btn btn-primary disabled" >Ver más</a>
-                </div>
+                   <% if(user.test){ %>
+                      
+                        <div class="card-body">
+                        <h5 class="card-title">Resultados</h5>
+                        <p class="card-text">Aquí se muestra todo las estaditicas que aun no hago xd.</p>
+                        <a href="/resultados" class="btn btn-primary" >Ver más</a>
+                      </div>   
+                    <% } else { %>
+                        
+                    <div class="card-body">
+                        <h5 class="card-title">Resultados test</h5>
+                        <p class="card-text">No has realizado el test, por tanto no podemos brindarte estadistica :(</p>
+                        <a href="/test" class="btn btn-primary btn-block">Realiazr Test</a>
+                    </div>
+                    <% } %>
+              
             </div>
 
             <br>
@@ -46,8 +57,11 @@
                     </ul>
 
                     <br>
-                    
-                    <a href="/test" class="btn btn-primary btn-block">Realiazr Test</a>
+                    <% if(user.test){ %>
+                        <a href="/resultados" class="btn btn-primary btn-block">Mirar Resultados</a>      
+                    <% } else { %>
+                        <a href="/test" class="btn btn-primary btn-block">Realiazr Test</a>
+                    <% } %>
               
 
                 </div>
