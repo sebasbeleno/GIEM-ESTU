@@ -6,8 +6,9 @@ module.exports = (app, passport) => {
 
     var db
   
-    MongoClient.connect('mongodb+srv://admin:GIEM@giem-4mkhr.mongodb.net/login-node?retryWrites=true&w=majority', (err, client) => {
+    MongoClient.connect('mongodb://localhost:27017/login-node', (err, client) => {
     if (err) return console.log(err)
+        console.log("Db is conected :D")
         db = client.db('login-node') // whatever your database name is
     })
   
@@ -33,7 +34,7 @@ module.exports = (app, passport) => {
         let archivistica = 0
 
         
-        actividadesAireLibre += +req.body.p19
+        actividadesAireLibre += +req.body.p1
         actividadesAireLibre += +req.body.p2
         actividadesAireLibre += +req.body.p3
         actividadesAireLibre += +req.body.p4
@@ -146,18 +147,13 @@ module.exports = (app, passport) => {
           if(err) console.log(err)
 
           test.save(function (err){
-            if (err) res.send(err)
-            console.log(todas)
-            res.redirect('/resultados')
+            
+            res.send("Hola, todo good :D")
             
           })
         })
 
        
-        
-         
-
-
       })
   
       app.get('/logout', (req, res) => {
@@ -166,22 +162,16 @@ module.exports = (app, passport) => {
       });
 
       app.get('/resultados', isLoggedIn, (req, res) => {
-        
-
         db.collection('tests').find({'test.estudianteCorreo': req.user.estudiantes.correo}).toArray((err, result)  => {
-          
           if(err) res.send(err)
 
           console.log(result)
 
           var cossas = result[0].test
 
-
           function sortByValue(jsObj){
             var sortedArray = [];
-            for(var i in jsObj)
-            {
-                // Push each JSON Object entry in array by [value, key]
+            for(var i in jsObj){
                 sortedArray.push([jsObj[i], i]);
             }
             return sortedArray.sort();
@@ -196,7 +186,7 @@ module.exports = (app, passport) => {
 
           res.render('resultados', {
             user: req.user.estudiantes,
-            resultados: result[0].test
+            resultados: ordenadoPorValor
           })
           
         })
