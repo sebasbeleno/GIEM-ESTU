@@ -15,44 +15,50 @@
     }
 </style>
 <div class="container mt-5">
-    <h1>Ya tenemos tus resultados <%= user.nombre %>!</h1>
+   <div class="title-resultados mb-5">
+        <h1>Ya tenemos tus resultados <%= user.nombre %>!</h1>
+   </div>
     <div class="row">
-        <canvas id="myChart"></canvas>
-    </div>
-
-    <h1>Tus mejores cualidades son: </h1>
-
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="card">
-                    <div class="card-body">
-                        <p><%= resultados[8][1]  %></p>
-                        <strong>Puntaje: </strong>
-                        <p> <%= resultados[8][0] %> </p>
+        <div class="col-6">
+            <canvas id="myChart"></canvas>
+        </div>
+        <div class="col-6">
+            <h4>Tus mejores cualidades son: </h4>
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <p><%= resultados[8][1]  %></p>
+                            <strong>Puntaje: </strong>
+                            <p> <%= resultados[8][0] %> </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card-body">
-                        <p><%= resultados[7][1]  %></p>
-                        <strong>Puntaje: </strong>
-                        <p> <%= resultados[7][0] %> </p>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <p><%= resultados[7][1]  %></p>
+                            <strong>Puntaje: </strong>
+                            <p> <%= resultados[7][0] %> </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card-body">
-                        <p><%= resultados[6][1]  %></p>
-                        <strong>Puntaje: </strong>
-                        <p> <%= resultados[6][0] %> </p>
+
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <p><%= resultados[6][1]  %></p>
+                            <strong>Puntaje: </strong>
+                            <p> <%= resultados[6][0] %> </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+   
 </div>
 <br><br><br><br><br><br><br><br>
 <script>
