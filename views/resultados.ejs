@@ -13,33 +13,36 @@
         width: 10%;
         height: 10;
     }
+
 </style>
+
+
 <div class="container mt-5">
    <div class="title-resultados mb-5">
         <h1>Ya tenemos tus resultados <%= user.nombre %>!</h1>
    </div>
     <div class="row">
-        <div class="col-6">
+        <div class="col-sm-6">
             <canvas id="myChart"></canvas>
         </div>
-        <div class="col-6">
+        <div class="col-sm-6">
             <h4>Tus mejores cualidades son: </h4>
             <div class="row">
                 <div class="col">
                     <div class="card">
                         <div class="card-body">
-                            <p><%= resultados[8][1]  %></p>
+                            <p><%= resultados[1][1]  %></p>
                             <strong>Puntaje: </strong>
-                            <p> <%= resultados[8][0] %> </p>
+                            <p> <%= resultados[1][0] %> </p>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card">
                         <div class="card-body">
-                            <p><%= resultados[7][1]  %></p>
+                            <p><%= resultados[2][1]  %></p>
                             <strong>Puntaje: </strong>
-                            <p> <%= resultados[7][0] %> </p>
+                            <p> <%= resultados[2][0] %> </p>
                         </div>
                     </div>
                 </div>
@@ -47,35 +50,31 @@
                 <div class="col">
                     <div class="card">
                         <div class="card-body">
-                            <p><%= resultados[6][1]  %></p>
+                            <p><%= resultados[3][1]  %></p>
                             <strong>Puntaje: </strong>
-                            <p> <%= resultados[6][0] %> </p>
+                            <p> <%= resultados[3][0] %> </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        
     </div>
-
-
+    <div class="alert alert-success">
+        <h3>Ya le avisamos a tu Psico, solo espera a que te contacte :D.</h3> <a href="/perfil" class="btn btn-light ">Volver al perfil</a>
+    </div>
    
+
 </div>
-<br><br><br><br><br><br><br><br>
-<script>
-
-
-
-</script>
-
 <script>
     var ctx = document.getElementById('myChart');
     var myChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['<%= resultados[0][1] %>', ' <%= resultados[1][1] %>', '<%= resultados[2][1] %>', '<%= resultados[3][1] %>', '<%= resultados[4][1] %>', '<%= resultados[5][1] %>', '<%= resultados[6][1] %>', '<%= resultados[7][1] %>', '<%= resultados[8][1] %>'],
+            labels: ['<%= resultados[1][1] %>', ' <%= resultados[2][1] %>', '<%= resultados[3][1] %>', '<%= resultados[4][1] %>', '<%= resultados[5][1] %>', '<%= resultados[6][1] %>', '<%= resultados[7][1] %>', '<%= resultados[8][1] %>', '<%= resultados[9][1] %>'],
             datasets: [{
                 label: '# de resultados',
-                data: [ <%= resultados[0][0] %>,  <%= resultados[1][0] %>, <%= resultados[2][0] %>, <%= resultados[3][0] %>, <%= resultados[4][0] %>, <%= resultados[5][0] %>, <%= resultados[6][0] %>, <%= resultados[7][0] %>, <%= resultados[8][0] %>],
+                data: [ <%= resultados[1][0] %>,  <%= resultados[2][0] %>, <%= resultados[3][0] %>, <%= resultados[4][0] %>, <%= resultados[5][0] %>, <%= resultados[6][0] %>, <%= resultados[7][0] %>, <%= resultados[8][0] %>, <%= resultados[9][0] %>],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',

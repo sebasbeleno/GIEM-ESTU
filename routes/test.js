@@ -20,7 +20,7 @@ module.exports = (app, passport) => {
   
   
       app.post('/test', isLoggedIn, (req, res) => {
-        //res.send(req.body)
+      
         
         let actividadesAireLibre = 0
         let Mecanicos = 0
@@ -148,7 +148,7 @@ module.exports = (app, passport) => {
 
           test.save(function (err){
             
-            res.send("Hola, todo good :D")
+            res.redirect('/perfil')
             
           })
         })
@@ -169,12 +169,14 @@ module.exports = (app, passport) => {
 
           var cossas = result[0].test
 
+          function comparar ( a, b ){ return a - b; }
+
           function sortByValue(jsObj){
             var sortedArray = [];
             for(var i in jsObj){
                 sortedArray.push([jsObj[i], i]);
             }
-            return sortedArray.sort();
+            return sortedArray.sort(comparar);
           } 
 
      

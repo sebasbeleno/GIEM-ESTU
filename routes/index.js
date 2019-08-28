@@ -49,20 +49,63 @@ module.exports = (app, passport) => {
        * Ya que por alguna razon, este da como 'undefined' a la propiedad .datos.
        */
       db.collection('estudiantes').find({'_id': req.user._id}).toArray(function (err, results){
-
-        console.log("Consulta db: ",results[0].estudiantes.datos)
+       
 
         if(!results[0].estudiantes.datos){
           res.redirect('/completar')
         }else{
-          res.render("perfil", {
-            user: results[0].estudiantes
+          
+          db.collection('tests').find({'test.estudianteCorreo': req.user.estudiantes.correo}).toArray((err, result)  => { 
+
+            if(err) res.send(err)
+            if(result[0]){
+
+              var cossas = result[0].test
+  
+              function comparar ( a, b ){ return a - b; }
+  
+              function sortByValue(jsObj){
+                var sortedArray = [];
+                for(var i in jsObj){
+                    sortedArray.push([jsObj[i], i]);
+                }
+                return sortedArray.sort(comparar);
+              } 
+  
+        
+  
+  
+  
+              var ordenadoPorValor = sortByValue(cossas)
+  
+              console.table(ordenadoPorValor)
+  
+              res.render("perfil", {
+                user: results[0].estudiantes,
+                resultados: ordenadoPorValor
+              })
+            }else{
+              res.render("perfil", {
+                user: results[0].estudiantes,
+               
+              })
+            }
+
+
+           
+
           })
+
+          
         }
 
        
-        //console.log(req.user.estudiantes.datos)
       })
+
+
+        
+
+      
 
       
     })

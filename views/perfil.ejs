@@ -1,6 +1,16 @@
 <% include partials/_head %>
 <% include partials/_menu %>
 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.css"
+    integrity="sha256-IvM9nJf/b5l2RoebiFno92E5ONttVyaEEsdemDC6iQA=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"
+    integrity="sha256-arMsf+3JJK2LoTGqxfnuJPFTU4hAK57MtIPdFpiHXOU=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"
+    integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
+
+
+
 <div class="container mt-5">
     <div class="row">
         <div class="col col-md-6">
@@ -8,34 +18,26 @@
 
             <br>
 
-            <% if(user.datos) { %>
-                <div class="alert alert-success" role="alert">
-                    El usuario ya puede realizar el test
-                    <%= user.datos %>
-                </div>
-            <% }else{ %>
-                <div class="alert alert-danger" role="alert">
-                    El usuario no puede realizar el test
-                </div>
-            <% } %>
 
-            <div class="card text-center" >
-                   <% if(user.test){ %>
-                      
-                        <div class="card-body">
-                        <h5 class="card-title">Resultados</h5>
-                        <p class="card-text">Aquí se muestra todo las estaditicas que aun no hago xd.</p>
-                        <a href="/resultados" class="btn btn-primary" >Ver más</a>
-                      </div>   
-                    <% } else { %>
-                        
-                    <div class="card-body">
-                        <h5 class="card-title">Resultados test</h5>
-                        <p class="card-text">No has realizado el test, por tanto no podemos brindarte estadistica :(</p>
-                        <a href="/test" class="btn btn-primary btn-block">Realiazr Test</a>
-                    </div>
-                    <% } %>
-              
+            <div class="card text-center">
+                <% if(user.test){ %>
+
+                <div class="card-body">
+                    <h5 class="card-title">Resultados</h5>
+
+                    <canvas id="myChart"></canvas>
+
+                    <a href="/resultados" class="btn btn-primary">Ver más</a>
+                </div>
+                <% } else { %>
+
+                <div class="card-body">
+                    <h5 class="card-title">Resultados test</h5>
+                    <p class="card-text">No has realizado el test, por tanto no podemos brindarte estadistica :(</p>
+                    <a href="/test" class="btn btn-primary btn-block">Realizar Test</a>
+                </div>
+                <% } %>
+
             </div>
 
             <br>
@@ -49,24 +51,87 @@
                         <h3><%= user.nombre %></h3>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><h6>Tu correo es:</h6><%= user.correo %></li>
-                        <li class="list-group-item"><h6>El correo de tu Psico es:</h6><%= user.psicoEmail %></li>
-                        <li class="list-group-item"><h6>Tienes</h6><%= user.edad %> Años</li>
-                        <li class="list-group-item"><h6>Eres:</h6><%= user.sexo %></li>
-                        <li class="list-group-item"><h6>Estás en grado:</h6><%= user.grado %></li>
+                        <li class="list-group-item">
+                            <h6>Tu correo es:</h6><%= user.correo %>
+                        </li>
+                        <li class="list-group-item">
+                            <h6>El correo de tu Psico es:</h6><%= user.psicoEmail %>
+                        </li>
+                        <li class="list-group-item">
+                            <h6>Tienes</h6><%= user.edad %> Años
+                        </li>
+                        <li class="list-group-item">
+                            <h6>Eres:</h6><%= user.sexo %>
+                        </li>
+                        <li class="list-group-item">
+                            <h6>Estás en grado:</h6><%= user.grado %>
+                        </li>
                     </ul>
 
                     <br>
                     <% if(user.test){ %>
-                        <a href="/resultados" class="btn btn-primary btn-block">Mirar Resultados</a>      
+                    <a href="/resultados" class="btn btn-primary btn-block">Mirar Resultados</a>
                     <% } else { %>
-                        <a href="/test" class="btn btn-primary btn-block">Realiazr Test</a>
+                    <a href="/test" class="btn btn-primary btn-block">Realizar Test</a>
                     <% } %>
-              
+
 
                 </div>
-                
+
             </div>
         </div>
     </div>
 </div>
+
+
+<% if(user.test){ %>
+
+
+    <script>
+            var ctx = document.getElementById('myChart');
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['<%= resultados[1][1] %>', ' <%= resultados[2][1] %>', '<%= resultados[3][1] %>', '<%= resultados[4][1] %>', '<%= resultados[5][1] %>', '<%= resultados[6][1] %>', '<%= resultados[7][1] %>', '<%= resultados[8][1] %>', '<%= resultados[9][1] %>'],
+                    datasets: [{
+                        label: '# de resultados',
+                        data: [ <%= resultados[1][0] %>,  <%= resultados[2][0] %>, <%= resultados[3][0] %>, <%= resultados[4][0] %>, <%= resultados[5][0] %>, <%= resultados[6][0] %>, <%= resultados[7][0] %>, <%= resultados[8][0] %>, <%= resultados[9][0] %>],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(255, 159, 64, 0.2)',
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)',
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            });
+        </script>
+    <% } %>
+
+    
