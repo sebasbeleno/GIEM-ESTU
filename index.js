@@ -10,7 +10,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 //Administra las sessiones del navegador
 const session = require('express-session');
-
+const nodemailer = require('nodemailer')
 //Url de la base de datos
 const { url } = require('./config/database.js');
 
@@ -46,7 +46,7 @@ app.use(flash());
 
 
 require('./routes/index')(app, passport);
-require('./routes/test')(app, passport);
+require('./routes/test')(app, passport, nodemailer);
 
 //Static files
 app.use(express.static(path.join(__dirname, 'public')));

@@ -1,4 +1,8 @@
-module.exports = (app, passport) => {
+const path = require("path")
+
+module.exports = (app, passport, nodeMailer) => {
+
+    const ejs = require('ejs')
 
     const  MongoClient = require('mongodb').MongoClient
   
@@ -147,8 +151,46 @@ module.exports = (app, passport) => {
           if(err) console.log(err)
 
           test.save(function (err){
-            
-            res.redirect('/perfil')
+
+            let transporter = nodeMailer.createTransport({
+              /** protocolos que usaremos, en este caso, smtp de google */
+              host: 'smtp.gmail.com',
+              port: 465,
+              secure: true,
+              auth: {
+                /** La cuenta desde donde enviaremos el correo, en este caso
+                 * GIEMJS
+                 */
+                user: 'inemgiem@gmail.com',
+                pass: 'GIEM2019'
+              }
+            });
+
+            console.log(req.user)
+
+
+            ejs.renderFile(path.join(__dirname, '../', 'public', 'html', 'TestNotificationMail.ejs'), { estudiante: req.user.estudiantes }, function (err, data) {
+              if (err) {
+                console.log(err);
+              }else {
+                var mainOptions = {
+                  to: req.user.estudiantes.psicoEmail,
+                  subject: `${req.user.estudiantes.nombre}, A realizado el test!`,
+                  html: data
+                };
+                //console.log("html data ======================>", mainOptions.html);
+                transporter.sendMail(mainOptions, function (err, info) {
+                  if (err) {
+                    console.log(err);
+                  } else {
+                    //console.log('Message sent: ' + info.response);
+                    res.redirect('/perfil')
+                  }
+                });
+              }
+            })	 
+
+
             
           })
         })
