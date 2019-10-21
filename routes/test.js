@@ -10,7 +10,7 @@ module.exports = (app, passport, nodeMailer) => {
 
     var db
   
-    MongoClient.connect('mongodb+srv://admin:GIEM@giem-4mkhr.mongodb.net/login-node?retryWrites=true&w=majority', (err, client) => {
+    MongoClient.connect('mongodb://localhost:27017/login-node', (err, client) => {
     if (err) return console.log(err)
         console.log("Db is conected :D")
         db = client.db('login-node') // whatever your database name is

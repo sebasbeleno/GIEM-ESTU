@@ -13,45 +13,58 @@
         width: 10%;
         height: 10;
     }
-
+    .mejorCard{
+        background: #ECE9E6;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        color: black;
+        border-radius: 10px;
+        border: transparent;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+        margin: 10px;
+    }
+    .mejorCard:hover{
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
 </style>
 
 
 <div class="container mt-5">
    <div class="title-resultados mb-5">
-        <h1>Ya tenemos tus resultados <%= user.nombre %>!</h1>
+        <h1>Estos son tus resultados, <%= user.nombre %></h1>
    </div>
     <div class="row">
         <div class="col-sm-6">
             <canvas id="myChart"></canvas>
         </div>
-        <div class="col-sm-6">
-            <h4>Tus mejores cualidades son: </h4>
+        <div class="col-sm-6 mt-5">
+            <h3>Tus mejores cualidades son: </h3>
             <div class="row">
-                <div class="col">
-                    <div class="card">
+                <div class="col-md-6 col-sm-6 ">
+                    <div class="card mejorCard">
                         <div class="card-body">
-                            <p><%= resultados[1][1]  %></p>
-                            <strong>Puntaje: </strong>
+                            <strong><h3><%= resultados[1][1]  %></h3></strong>
+                            <p>Puntaje:</p>
                             <p> <%= resultados[1][0] %> </p>
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card">
+                <div class="col-md-6 col-sm-6">
+                    <div class="card mejorCard">
                         <div class="card-body">
-                            <p><%= resultados[2][1]  %></p>
-                            <strong>Puntaje: </strong>
+                            <h3><%= resultados[2][1]  %></h3>
+                            <p>Puntaje: </p>
                             <p> <%= resultados[2][0] %> </p>
                         </div>
                     </div>
                 </div>
 
-                <div class="col">
-                    <div class="card">
+                <div class="col-md-6 col-sm-6">
+                    <div class="card mejorCard">
                         <div class="card-body">
-                            <p><%= resultados[3][1]  %></p>
-                            <strong>Puntaje: </strong>
+                            <h3><%= resultados[3][1]  %></h3>
+                            <p>Puntaje: </p>
                             <p> <%= resultados[3][0] %> </p>
                         </div>
                     </div>
@@ -60,7 +73,7 @@
         </div>
         
     </div>
-    <div class="alert alert-success">
+    <div class="alert alert-success mt-5">
         <h3>Ya le avisamos a tu Psico, solo espera a que te contacte :D.</h3> <a href="/perfil" class="btn btn-light ">Volver al perfil</a>
     </div>
    
