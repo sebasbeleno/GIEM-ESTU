@@ -1,57 +1,121 @@
-
-<nav class="uk-navbar-container" uk-navbar>
-        <div class="uk-navbar">
-          <div class="uk-navbar-left"><div>
-              <ul class="uk-navbar-nav">
-                  <li>
-                      <a href="ramas.html">Ramas</a>
-                      <div class="uk-navbar-dropdown">
-                          <ul class="uk-nav uk-navbar-dropdown-nav">
-                              <li><a href="/academica">Academica</a></li>
-                              <li><a href="/artes">Artes</a></li>
-                              <li><a href="/comercial">Comercial</a></li>
-                              <li><a href="/deportes">Deportes</a></li>
-                              <li><a href="/industrial">Industrial</a></li>
-                              <li><a href="/promocion">Promocion Social</a></li>
-                          </ul>
-                      </div>
-                  </li>
-              </ul>
-          </div></div>
-        <a class="uk-navbar-item uk-logo" href="/"></a>
-        <div class="uk-navbar-center-right"><div>
-            <ul class="uk-navbar-nav">
-              <li>
-                <a href="#">Modalidades</a>
-                <div class="uk-navbar-dropdown">
-                    <ul class="uk-nav uk-navbar-dropdown-nav">
-                      <li><a href="/ciencias_matematicas">Ciencias matematicas</a></li>
-                      <li><a href="/humanidades">Humanidades</a></li>
-                      <li><a href="/sistemas">Sistemas</a></li>
-                      <li><a href="/programacion">Programación</a></li>
-                      <li><a href="/quimica">Química Industrial</a></li>
-                      <li><a href="/musica">Musica</a></li>
-                      <li><a href="/plastica">Plástica</a></li>
-                      <li><a href="/gestion">Gestion Social</a></li>
-                      <li><a href="/gastronomia">Gastronomía</a></li>
-                      <li><a href="/administracion">Administración Comercial</a></li>
-                      <li><a href="/contabilidad">Contabilidad</a></li>
-                      <li><a href="/construcciones">Construciones</a></li>
-                      <li><a href="/electricidad">Electricidad</a></li>
-                      <li><a href="/electronica">Electrónica</a></li>
-                      <li><a href="/madera">Madera</a></li>
-                      <li><a href="/metalisteria">Metalistería</a></li>
-                      <li><a href="/moda">Moda</a></li>
-                    </ul>
-                </div>
-          
-            </li>
-           
-            
-         
-          
-           
-        </div></div>
+<style>
+    .menuArribe{
+     height:  70px; 
+    }
+  nav,
+  .navbar-toggle {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  nav {
+    position: fixed;
+    z-index: 10;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: table;
+    color: #161616;
+  }
+  
+  .nav-hide { display: none; }
+  
+  nav ul {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 0 !important;
+  }
+  
+  nav ul li { list-style: none; }
+  
+  nav ul li a {
+    font-size: 35pt;
+    color: inherit;
+    font-weight: bolder;
+    text-decoration: none;
+  }
+  
+  
+  .navbar-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    z-index: 20;
+    cursor: pointer;
+  }
+  
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 100%;
+    height: 8px;
+    margin-bottom: 5px;
+    background-color: #161616;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .navbar-on .bar1,
+  .navbar-on .bar2,
+  .navbar-on .bar3 { background-color: #161616; }
+  
+  .navbar-on .bar1 {
+    transform-origin: 10% 40%;
+    transform: rotate(45deg);
+  }
+  
+  .navbar-on .bar3 {
+    transform-origin: 10% 40%;
+    transform: rotate(-45deg);
+  }
+  
+  a:hover{
+    text-decoration: none;
+  }
+  
+  .navbar-on .bar2 { background-color: transparent; }
+  </style>
+  <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+  
+  <div class="navbar-toggle" title="<a href=" https://www.jqueryscript.net/menu/"> </a> <div class="bar1">
     </div>
-</nav>
-
+    <div class="bar2">
+    </div>
+    <div class="bar3">
+    </div>
+  </div>
+  
+  
+  
+  <nav class="nav-hide">
+    <ul>
+  
+      <li><a href="https://gieminem.herokuapp.com/">Inicio</a></li>
+  
+      <li><a href="/ramas">Ramas</a></li>
+  
+  
+      <li><a href="https://gieminem.herokuapp.com/decirQuienEs">Login</a></li>
+     
+  
+  
+    </ul>
+  
+  </nav>
+  
+  <script>
+  
+  $(function(){
+    $('.navbar-toggle, nav').click(function(){
+      $('.navbar-toggle').toggleClass('navbar-on');
+      $('nav').fadeToggle();
+      $('nav').removeClass('nav-hide');
+    });
+  });
+  </script>
